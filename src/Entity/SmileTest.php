@@ -30,6 +30,8 @@ use Drupal\user\UserInterface;
  *   },
  *   links = {
  *     "canonical" = "/smile_test_entity/{smile_test}",
+ *     "edit-form" = "/smile_test_entity/{smile_test}/edit",
+ *     "delete-form" = "/smile_test_entity/{smile_test}/delete",
  *     "collection" = "/smile_test_entity/list"
  *   },
  * )
