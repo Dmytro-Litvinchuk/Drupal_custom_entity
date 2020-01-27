@@ -1,0 +1,10 @@
+my_entity.collection:
+  title: 'Smile entity: listing'
+  route_name: my_entity.collection
+  description: 'List Smile'
+  weight: 10
+my_entity.admin.structure.settings:
+  title: 'Smile settings'
+  description: 'Configure Smile entity'
+  route_name: my_entity.settings
+  parent: system.admin_structure
