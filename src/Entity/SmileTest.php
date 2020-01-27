@@ -24,7 +24,6 @@ use Drupal\user\UserInterface;
  *     "list_builder" = "Drupal\my_entity\Entity\Controller\SmileListBuilder",
  *     "form" = {
  *       "default" = "Drupal\my_entity\Form\AddForm",
- *       "edit" = "Drupal\my_entity\Form\AddForm",
  *       "delete" = "Drupal\my_entity\Form\DeleteForm",
  *     },
  *   },
@@ -204,7 +203,7 @@ class SmileTest extends ContentEntityBase implements SmileInterface {
       ->setLabel(t('Language code'))
       ->setDescription(t('The language code of Smile Test entity.'));
 
-    $fields['registered'] = BaseFieldDefinition::create('created')
+    $fields['created'] = BaseFieldDefinition::create('created')
       ->setLabel(t('Registered'))
       ->setDescription(t('The time that the user was registered.'));
 

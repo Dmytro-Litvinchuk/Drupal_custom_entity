@@ -23,7 +23,7 @@ class AddForm extends ContentEntityForm {
   }
 
   public function save(array $form, FormStateInterface $form_state) {
-    $form_state->setRedirect('my_entity.collection');
+    $form_state->setRedirect('entity.smile_test.collection');
     $entity = $this->getEntity();
     $entity->save();
   }

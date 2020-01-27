@@ -2,7 +2,7 @@
 
 namespace Drupal\my_entity\Form;
 
-use Composer\Util\Url;
+use Drupal\Core\Url;
 use Drupal\Core\Entity\ContentEntityConfirmFormBase;
 use Drupal\Core\Form\FormStateInterface;
 
@@ -22,7 +22,7 @@ class DeleteForm extends ContentEntityConfirmFormBase {
    * @inheritDoc
    */
   public function getCancelUrl() {
-    return new Url('my_entity.collection');
+    return new Url('entity.smile_test.collection');
   }
 
   /**
@@ -40,7 +40,7 @@ class DeleteForm extends ContentEntityConfirmFormBase {
       '@type' => $this->entity->bundle(),
       '%title' => $this->entity->label(),
     ]);
-    $form_state->setRedirect('my_entity.collection');
+    $form_state->setRedirect('entity.smile_test.collection');
   }
 
 }

@@ -1,4 +1,4 @@
-my_entity.canonical:
+entity.smile_test.canonical:
   path: '/smile_test_entity/{smile_test}'
   defaults:
     _entity_view: 'smile_test'
@@ -6,7 +6,7 @@ my_entity.canonical:
   requirements:
     _permission: 'access content'
 
-my_entity.collection:
+entity.smile_test.collection:
   path: '/smile_test_entity/list'
   defaults:
     _entity_list: 'smile_test'
@@ -14,7 +14,7 @@ my_entity.collection:
   requirements:
     _permission: 'access content'
 
-my_entity.form_add:
+entity.smile_test.add_form:
   path: '/smile_test_entity/add'
   defaults:
     _entity_form: 'smile_test.default'
@@ -22,15 +22,15 @@ my_entity.form_add:
   requirements:
     _permission: 'access content'
 
-my_entity.form_edit:
+entity.smile_test.edit_form:
   path: '/smile_test_entity/{smile_test}/edit'
   defaults:
-    _entity_form: 'smile_test.edit'
+    _entity_form: 'smile_test.default'
     _title: 'Edit client'
   requirements:
     _permission: 'access content'
 
-my_entity.form_delete:
+entity.smile_test.delete_form:
   path: '/smile_test_entity/{smile_test}/delete'
   defaults:
     _entity_form: 'smile_test.delete'

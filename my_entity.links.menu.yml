@@ -1,10 +1,20 @@
-my_entity.collection:
+entity.smile_test.collection:
   title: 'Smile entity: listing'
-  route_name: my_entity.collection
+  route_name: entity.smile_test.collection
   description: 'List Smile'
-  weight: 10
-my_entity.admin.structure.settings:
+
+  entity.content_entity_example_contact.collection:
+    title: 'Content Entity Example'
+    route_name: entity.content_entity_example_contact.collection
+    description: 'List contacts'
+smile_test.admin.structure.settings:
   title: 'Smile settings'
   description: 'Configure Smile entity'
   route_name: my_entity.settings
+  parent: system.admin_structure
+
+content_entity_example_contact.admin.structure.settings:
+  title: 'Contact settings'
+  description: 'Configure contact entity'
+  route_name:  content_entity_example.contact_settings
   parent: system.admin_structure

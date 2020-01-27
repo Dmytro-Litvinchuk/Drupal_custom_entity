@@ -42,7 +42,7 @@ class SmileListBuilder extends EntityListBuilder {
     $row['name'] = $entity->label();
     $row['preferred_brand'] = $entity->preferred_brand->value;
     $row['products_owned_count'] = $entity->products_owned_count->value;
-    $row['registered'] = gmdate("M d Y", $entity->registered->value);
+    $row['registered'] = gmdate("M d Y", $entity->created->value);
     return $row + parent::buildRow($entity);
   }
 
