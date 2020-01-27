@@ -1,0 +1,7 @@
+name: My entity
+type: module
+description: Custom content entity
+package: Custom
+core: 8.x
+
+

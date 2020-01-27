@@ -1,0 +1,8 @@
+# Used for add form link to list entity
+my_entity.inventory_add:
+  route_name: my_entity.form_add
+  title: 'Add client'
+
+  # Where will the link appear, defined by route name
+  appears_on:
+    - my_entity.collection
