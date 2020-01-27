@@ -32,6 +32,7 @@ class SmileListBuilder extends EntityListBuilder {
     $header['name'] = $this->t('Name');
     $header['preferred_brand'] = $this->t('Preferred brand');
     $header['products_owned_count'] = $this->t('Products count');
+    $header['registered'] = $this->t('Date registered');
     return $header + parent::buildHeader();
   }
 
@@ -41,6 +42,7 @@ class SmileListBuilder extends EntityListBuilder {
     $row['name'] = $entity->label();
     $row['preferred_brand'] = $entity->preferred_brand->value;
     $row['products_owned_count'] = $entity->products_owned_count->value;
+    $row['registered'] = gmdate("M d Y", $entity->registered->value);
     return $row + parent::buildRow($entity);
   }
 

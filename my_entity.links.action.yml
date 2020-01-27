@@ -6,3 +6,4 @@ my_entity.inventory_add:
   # Where will the link appear, defined by route name
   appears_on:
     - my_entity.collection
+    - my_entity.canonical

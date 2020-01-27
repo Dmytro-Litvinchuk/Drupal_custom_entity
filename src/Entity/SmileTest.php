@@ -29,6 +29,7 @@ use Drupal\user\UserInterface;
  *     },
  *   },
  *   links = {
+ *     "canonical" = "/smile_test_entity/{smile_test}",
  *     "collection" = "/smile_test_entity/list"
  *   },
  * )
@@ -169,7 +170,7 @@ class SmileTest extends ContentEntityBase implements SmileInterface {
       ])->setDisplayOptions('form', [
         'type' => 'number',
         'min' => 0,
-        'weight' => -2,
+        'weight' => -3,
       ])
       ->setDisplayConfigurable('view', TRUE)
       ->setDisplayConfigurable('form', TRUE);
@@ -182,7 +183,7 @@ class SmileTest extends ContentEntityBase implements SmileInterface {
       ->setDisplayOptions('view', [
         'label' => 'above',
         'type' => 'entity_reference',
-        'weight' => -3,
+        'weight' => -2,
       ])
       ->setDisplayOptions('form', [
         'type' => 'entity_reference_autocomplete',
@@ -201,9 +202,9 @@ class SmileTest extends ContentEntityBase implements SmileInterface {
       ->setLabel(t('Language code'))
       ->setDescription(t('The language code of Smile Test entity.'));
 
-    $fields['created'] = BaseFieldDefinition::create('created')
-      ->setLabel(t('Created'))
-      ->setDescription(t('The time that the entity was created.'));
+    $fields['registered'] = BaseFieldDefinition::create('created')
+      ->setLabel(t('Registered'))
+      ->setDescription(t('The time that the user was registered.'));
 
     $fields['changed'] = BaseFieldDefinition::create('changed')
       ->setLabel(t('Changed'))
