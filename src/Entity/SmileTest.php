@@ -6,7 +6,7 @@ use Drupal\Core\Entity\ContentEntityBase;
 use Drupal\Core\Entity\EntityStorageInterface;
 use Drupal\Core\Entity\EntityTypeInterface;
 use Drupal\Core\Field\BaseFieldDefinition;
-use Drupal\my_entity\SmileInterface;
+use Drupal\my_entity\SmileTestInterface;
 use Drupal\user\UserInterface;
 
 /**
@@ -23,7 +23,7 @@ use Drupal\user\UserInterface;
  *     "view_builder" = "Drupal\Core\Entity\EntityViewBuilder",
  *     "list_builder" = "Drupal\my_entity\Entity\Controller\SmileListBuilder",
  *     "form" = {
- *       "default" = "Drupal\my_entity\Form\AddForm",
+ *       "default" = "Drupal\my_entity\Form\DefaultForm",
  *       "delete" = "Drupal\my_entity\Form\DeleteForm",
  *     },
  *   },
@@ -33,9 +33,10 @@ use Drupal\user\UserInterface;
  *     "delete-form" = "/smile_test_entity/{smile_test}/delete",
  *     "collection" = "/smile_test_entity/list"
  *   },
+ *   field_ui_base_route = "my_entity.smile_test_settings",
  * )
  */
-class SmileTest extends ContentEntityBase implements SmileInterface {
+class SmileTest extends ContentEntityBase implements SmileTestInterface {
 
   /**
    *
@@ -164,13 +165,13 @@ class SmileTest extends ContentEntityBase implements SmileInterface {
     $fields['products_owned_count'] = BaseFieldDefinition::create('integer')
       ->setLabel(t('Products count'))
       ->setDescription(t('Products owned count'))
+      ->setSetting('unsigned', TRUE)
       ->setDisplayOptions('view', [
         'label' => 'above',
         'type' => 'integer',
         'weight' => -2,
       ])->setDisplayOptions('form', [
         'type' => 'number',
-        'min' => 0,
         'weight' => -3,
       ])
       ->setDisplayConfigurable('view', TRUE)

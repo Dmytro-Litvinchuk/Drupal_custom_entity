@@ -17,7 +17,7 @@ class SmileListBuilder extends EntityListBuilder {
     $build['description'] = [
       '#markup' => $this->t('Smile Entity Example implements a Contacts model. These contacts are fieldable entities. You can manage the fields on the <a href="@adminlink">Contacts admin page</a>.', [
         '@adminlink' => \Drupal::urlGenerator()
-          ->generateFromRoute('my_entity.settings'),
+          ->generateFromRoute('my_entity.smile_test_settings'),
       ]),
     ];
     $build['table'] = parent::render();

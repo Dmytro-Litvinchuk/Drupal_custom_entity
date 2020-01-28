@@ -11,7 +11,7 @@ use Drupal\user\EntityOwnerInterface;
  *
  * @ingroup my_entity
  */
-interface SmileInterface extends
+interface SmileTestInterface extends
     ContentEntityInterface,
     EntityOwnerInterface,
     EntityChangedInterface {

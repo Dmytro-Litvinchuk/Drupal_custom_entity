@@ -6,7 +6,7 @@ use Drupal\Core\Entity\ContentEntityForm;
 use Drupal\Core\Form\FormStateInterface;
 use Drupal\Core\Language\Language;
 
-class AddForm extends ContentEntityForm {
+class DefaultForm extends ContentEntityForm {
 
   public function buildForm(array $form, FormStateInterface $form_state) {
     /* @var $entity \Drupal\my_entity\Entity\SmileTest */

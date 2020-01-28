@@ -1,7 +1,7 @@
 smile.settings_tab:
-  route_name: my_entity.settings
+  route_name: my_entity.smile_test_settings
   title: Settings
-  base_route: my_entity.settings
+  base_route: my_entity.smile_test_settings
 
 smile.view:
   route_name: entity.smile_test.canonical
