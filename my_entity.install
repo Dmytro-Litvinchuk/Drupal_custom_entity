@@ -7,7 +7,7 @@ use \Drupal\my_entity\Entity\SmileTest;
  *
  * Set some value to the table fields "smile_test".
  */
-function my_entity_update_8101() {
+function my_entity_update_8116() {
 
   function crt_client($name, $brand, $count) {
     $node = SmileTest::create([
@@ -27,7 +27,7 @@ function my_entity_update_8101() {
 /**
  * Set a current date for every “registration date” value if the value is more than 10 days (smile_test).
  */
-function my_entity_update_8102(&$sandbox) {
+function my_entity_update_8123(&$sandbox) {
 
   if (!isset($sandbox['total'])) {
     $now = time();

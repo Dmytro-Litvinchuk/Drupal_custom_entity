@@ -21,6 +21,7 @@ use Drupal\user\UserInterface;
  *   admin_permission = "administer site configuration",
  *   handlers = {
  *     "view_builder" = "Drupal\Core\Entity\EntityViewBuilder",
+ *     "views_data" = "Drupal\my_entity\Entity\SmileTestViewsData",
  *     "list_builder" = "Drupal\my_entity\Entity\Controller\SmileListBuilder",
  *     "form" = {
  *       "default" = "Drupal\my_entity\Form\DefaultForm",
